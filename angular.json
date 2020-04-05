@@ -63,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-new-bootstrap:build"
+            "browserTarget": "ng-new-bootstrap:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
