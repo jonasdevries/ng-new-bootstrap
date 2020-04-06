@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient } from "@angular/common/http";
-import {Greeting} from "./home/greeting";
+import {Greeting} from './model/Greeting';
+import {MainService} from './services/main.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,12 @@ import {Greeting} from "./home/greeting";
 })
 
 export class AppComponent {
+  title =  'Demo';
+  greeting: Greeting;
+
+  constructor(private mainService: MainService){
+    this.mainService.greeting()
+      .subscribe(resp => this.greeting = resp);
+  }
 
 }

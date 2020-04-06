@@ -1,4 +1,4 @@
-export interface Greeting {
+export interface  Greeting {
   id: string;
   content: string;
 }
